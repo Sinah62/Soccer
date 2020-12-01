@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar color="dark">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Login</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form class="form">
+        <ion-item>
+            <div class=".imgcontainer">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiKJwStfc7zhyh2r5otOykkz0KoGTVF2nFskFObZtNWy0t0664v7QQ0Ukcos7VHpP25PgjWIlXfpwhLzzHOBhNTKt0UV-w7So&usqp=CAU&ec=45732302" style="width: 100%;">
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="text" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" required></ion-input>
+        </ion-item>
+
+        <ion-row>
+            <ion-col>
+                <ion-button type="submit" color="warning" [routerLink]="['/home']" expand="block">Sign In</ion-button>
+                <a [routerLink]="['/forgot-pass']" class="small-text">Forgot Password?</a>
+            </ion-col>
+        </ion-row>
+    </form>
+</ion-content>

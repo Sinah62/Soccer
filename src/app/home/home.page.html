@@ -1,0 +1,107 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button autoHide='false'></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Home
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="menu">
+        <img src="https://hddesktopwallpapers.in/wp-content/uploads/2015/06/best-soccer-wallpapers.jpg" style="width: 100%;">
+        <ion-fab vertical="top" horizontal="end" slot="fixed">
+            <ion-fab-button (click)="openCart()" #cart>
+                <div class="cart-length">{{ cartItemCount | async }}</div>
+                <ion-icon name="football" class="cart-icon"></ion-icon>
+            </ion-fab-button>
+        </ion-fab>
+
+    </div>
+    <ion-grid class="grid-categories">
+        <ion-row *ngFor="let p of products; let i = index">
+            <ion-col *ngIf="i % 2 == 0">
+                <ion-card-header>
+                    <ion-card-title>{{ p.name }}</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    <ion-col>
+                        <img src={{p.imageurl}} style="width: 100%;">
+                    </ion-col>
+
+
+
+                    <ion-col>
+
+                        <ion-button color="success" expand="full" (click)="addToCart(p)">Add Goal
+                        </ion-button>
+                    </ion-col>
+
+                    <ion-col>
+
+                        <ion-button color="warning" expand="full" (click)="addToCart(p.yellowCard)">Add YellowCard
+                        </ion-button>
+                    </ion-col>
+                    <ion-col>
+
+                        <ion-button color="danger" expand="full" (click)="addToCart(p.redCard)">Add RedCard
+                        </ion-button>
+                    </ion-col>
+                    <ion-col>
+
+                        <ion-button expand="full" (click)="addToCart(p.offSide)">Add OffSide
+                        </ion-button>
+                    </ion-col>
+
+                </ion-card-content>
+
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-grid class="grid-categories">
+        <ion-row *ngFor="let p of products; let i = index">
+            <ion-col *ngIf="i % 2 != 0">
+                <ion-card-header>
+                    <ion-card-title>{{ p.name }}</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+
+                    <ion-col>
+                        <img src={{p.imageurl}} style="width: 100%;">
+                    </ion-col>
+                    <ion-col>
+
+                        <ion-button color="success" expand="full" (click)="addToCart(p)">Add Goal
+                        </ion-button>
+                    </ion-col>
+
+                    <ion-col>
+
+                        <ion-button color="warning" expand="full" (click)="addToCart(p.yellowCard)">Add YellowCard
+                        </ion-button>
+                    </ion-col>
+                    <ion-col>
+
+                        <ion-button color="danger" expand="full" (click)="addToCart(p.redCard)">Add RedCard
+                        </ion-button>
+                    </ion-col>
+                    <ion-col>
+
+                        <ion-button expand="full" (click)="addToCart(p.offSide)">Add OffSide
+                        </ion-button>
+                    </ion-col>
+                </ion-card-content>
+
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <div class="category text-center">
+
+        <ion-button expand="full" color="dark" (click)="register(form)">Reset</ion-button>
+    </div>
+
+</ion-content>
+<ion-footer>
+
+</ion-footer>

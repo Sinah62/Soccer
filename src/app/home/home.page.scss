@@ -1,0 +1,62 @@
+#container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#container strong {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+#container p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #8c8c8c;
+    margin: 0;
+}
+
+#container a {
+    text-decoration: none;
+}
+
+ion-fab-button {
+    height: 70px;
+    width: 70px;
+}
+
+.cart-icon {
+    font-size: 50px;
+    color: #ebeef1;
+}
+
+.cart-icon :hover {
+    font-size: 50px;
+}
+
+.cart-length {
+    color: var(--ion-color-primary);
+    color: black;
+    position: absolute;
+    top: 18px;
+    left: 25px;
+    font-weight: 600;
+    font-size: 1em;
+    min-width: 25px;
+    z-index: 10;
+}
+
+.grid-categories {
+    width: 50%;
+    float: left;
+    border: gray solid;
+    //height: 1000;
+}
+
+.team {
+    width: 33.33%;
+    float: left;
+}
